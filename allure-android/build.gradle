@@ -8,11 +8,14 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:${androidPlugin}"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1' // Add this line
     }
 }
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.danser'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
